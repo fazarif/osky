@@ -1,0 +1,13 @@
+{
+    "require": {
+        "symfony/console": "^5.3",
+        "symfony/http-client": "^5.3"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Console\\": "src/Osky/Commands/"
+        },
+        "classmap": ["src/Osky/Commands/"]
+    }
+}
