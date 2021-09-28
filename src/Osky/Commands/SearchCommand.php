@@ -127,11 +127,12 @@ class SearchCommand extends Command
             }
         }
 
-        usort($rows, function ($a, $b) {
-            return $a['title'] <=> $b['title'];
-        });
+        if(isset($rows)){
+            
+            usort($rows, function ($a, $b) {
+                return $a['title'] <=> $b['title'];
+            });
 
-        if(isset    ($rows)){
             $table->setRows($rows);    
             $table->render();
         }
