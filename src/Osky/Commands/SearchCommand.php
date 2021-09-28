@@ -83,7 +83,7 @@ class SearchCommand extends Command
             $url = array_column($array,'permalink');
             $selftext = array_column($array,'selftext');
 
-            $strini = strval($selftext[0]);
+            $strini = preg_replace('/\s+/', ' ',strval($selftext[0]));
 
             $pos = stripos($strini,$term);
             $len = strlen($strini);
