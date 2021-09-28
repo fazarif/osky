@@ -4,10 +4,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Console\HelloCommand;
-use Console\TestCommand;
+use Console\SearchCommand;
 
 $app = new Application();
-$app->add(new HelloCommand());
-$app->add(new TestCommand());
+$app->add(new SearchCommand());
 $app->run();
